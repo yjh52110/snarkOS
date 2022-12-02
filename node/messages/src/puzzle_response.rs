@@ -49,26 +49,22 @@ impl<N: Network> MessageTrait for PuzzleResponse<N> {
         Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
-        Ok(Self {
+        });
+             Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
-        Ok(Self {
+        });
+             Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
-        Ok(Self {
+        });
+             Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
-        Ok(Self {
+        });
+             Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
-        Ok(Self {
-            epoch_challenge: EpochChallenge::read_le(&mut reader)?,
-            block_header: Data::Buffer(reader.into_inner().freeze()),
-        })
+        });
     }
 }
