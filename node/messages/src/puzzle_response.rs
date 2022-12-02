@@ -33,15 +33,13 @@ impl<N: Network> MessageTrait for PuzzleResponse<N> {
     #[inline]
     fn serialize<W: Write>(&self, writer: &mut W) -> Result<()> {
         writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer)
-                writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer)
-                writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer)
-                writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer)
-                writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer)
+        writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
+        writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
+        writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
+        writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
+        self.block_header.serialize_blocking_into(writer);
+         
+      
     }
 
     /// Deserializes the given buffer into a message.
