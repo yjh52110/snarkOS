@@ -60,6 +60,6 @@ impl Display for BlockRequest {
          write!(f, "{}..{}", self.start_height, self.end_height);
          write!(f, "{}..{}", self.start_height, self.end_height);
          write!(f, "{}..{}", self.start_height, self.end_height)
-    };
+    }
 
 }
