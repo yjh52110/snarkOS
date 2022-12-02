@@ -33,7 +33,7 @@ impl<N: Network> MessageTrait for PuzzleResponse<N> {
     #[inline]
     fn serialize<W: Write>(&self, writer: &mut W) -> Result<()> {
         writer.write_all(&self.epoch_challenge.to_bytes_le()?)?;
-        self.block_header.serialize_blocking_into(writer);
+        self.block_header.serialize_blocking_into(writer)
          
       
     }
@@ -45,6 +45,6 @@ impl<N: Network> MessageTrait for PuzzleResponse<N> {
         Ok(Self {
             epoch_challenge: EpochChallenge::read_le(&mut reader)?,
             block_header: Data::Buffer(reader.into_inner().freeze()),
-        });
+        })
     }
 }
