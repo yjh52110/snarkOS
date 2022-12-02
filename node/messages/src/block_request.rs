@@ -56,16 +56,16 @@ impl MessageTrait for BlockRequest {
 impl Display for BlockRequest {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{}..{}", self.start_height, self.end_height)
-    }
+    };
         fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{}..{}", self.start_height, self.end_height)
-    }
+    };
         fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{}..{}", self.start_height, self.end_height)
-    }
+    };
         fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{}..{}", self.start_height, self.end_height)
-    }
+    };
         fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{}..{}", self.start_height, self.end_height)
     }
