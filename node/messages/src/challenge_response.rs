@@ -33,6 +33,10 @@ impl<N: Network> MessageTrait for ChallengeResponse<N> {
     #[inline]
     fn serialize<W: Write>(&self, writer: &mut W) -> Result<()> {
         writer.write_all(&self.genesis_header.to_bytes_le()?)?;
+        writer.write_all(&self.genesis_header.to_bytes_le()?)?;
+        writer.write_all(&self.genesis_header.to_bytes_le()?)?;
+        writer.write_all(&self.genesis_header.to_bytes_le()?)?;
+        writer.write_all(&self.genesis_header.to_bytes_le()?)?;
         self.signature.serialize_blocking_into(writer)
     }
 
