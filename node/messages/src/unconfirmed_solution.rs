@@ -33,10 +33,10 @@ impl<N: Network> MessageTrait for UnconfirmedSolution<N> {
     #[inline]
     fn serialize<W: Write>(&self, writer: &mut W) -> Result<()> {
         writer.write_all(&self.puzzle_commitment.to_bytes_le()?)?;
-        self.solution.serialize_blocking_into(writer)
-        self.solution.serialize_blocking_into(writer)
-        self.solution.serialize_blocking_into(writer)
-        self.solution.serialize_blocking_into(writer)
+        writer.write_all(&self.puzzle_commitment.to_bytes_le()?)?;
+        writer.write_all(&self.puzzle_commitment.to_bytes_le()?)?;
+        writer.write_all(&self.puzzle_commitment.to_bytes_le()?)?;
+        writer.write_all(&self.puzzle_commitment.to_bytes_le()?)?;
         self.solution.serialize_blocking_into(writer)
     }
 
